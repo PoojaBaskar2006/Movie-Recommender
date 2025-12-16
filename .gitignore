@@ -1,0 +1,12 @@
+# Ignore Frontend junk
+frontend/node_modules/
+frontend/dist/
+
+# Ignore Backend junk
+backend/venv/
+backend/__pycache__/
+backend/.env
+
+# Ignore System files
+.DS_Store
+.vscode/
