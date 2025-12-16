@@ -6,12 +6,20 @@ import ast
 
 app = Flask(__name__)
 CORS(app)
+import os
+from dotenv import load_dotenv
+
+# This searches for the .env file and loads the variables
+load_dotenv()
+
+# Now you can use the key like this:
+api_key = os.getenv("TMDB_API_KEY")
 
 
 # --- 1. THE API FUNCTION (Place this at the top) ---
 def fetch_poster(movie_id):
     # 👇👇 PASTE YOUR KEY BELOW 👇👇
-    api_key = "1738f27b5c540730a5b5eb62e53df1d8"
+    
 
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US"
 
