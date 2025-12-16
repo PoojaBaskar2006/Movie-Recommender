@@ -1,16 +1,42 @@
-# React + Vite
+# Movie Recommendation System 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack movie recommendation application built with **React (Vite)** and **Python (Flask)**, utilizing the **TMDB Dataset** and **TMDB API**.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- **Movie Search:** Real-time search using the TMDB API.
+- **Content-Based Filtering:** Suggests similar movies using Cosine Similarity logic.
+- **Dynamic UI:** Modern interface displaying high-quality posters and metadata.
+- **Efficient Asset Loading:** Fast performance powered by Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- **Frontend:** React.js, Vite, Axios, CSS3
+- **Backend:** Python, Flask, Scikit-learn, Pandas
+- **Data:** TMDB API & TMDB 5000 Movies Dataset (CSV)
 
-## React Compiler
+## 📊 Dataset & Machine Learning
+- **Dataset:** I used the TMDB 5000 Movie Dataset to extract features like genres, keywords, and cast.
+- **Processing:** Data cleaning and tags creation were performed using Pandas.
+- **Algorithm:** The system calculates the distance between movie vectors using **Cosine Similarity** to provide the most accurate recommendations.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌐 API Integration
+- This project fetches real-time movie details (posters, descriptions, and ratings) using the **TMDB API**. 
+- A custom fetching function maps the local movie IDs to the TMDB database to retrieve visuals.
 
-## Expanding the ESLint configuration
+## 🛡️ Security
+- **Sensitive Info:** All API keys are stored in a `.env` file.
+- **Gitignore:** The `.env`, `node_modules`, and `venv` folders are excluded from this repository to ensure security and light weight.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔧 Setup & Installation
+
+### Frontend
+1. `cd movie-project` (or your root folder)
+2. `npm install`
+3. `npm run dev`
+
+### Backend
+1. `cd backend`
+2. `pip install -r requirements.txt`
+3. Create a `.env` file and add: `TMDB_API_KEY=your_key_here`
+4. `python app.py`
+
+---
