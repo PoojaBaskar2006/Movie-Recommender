@@ -36,7 +36,7 @@ A full-stack movie recommendation application built with **React (Vite)** and **
 ### Backend
 1. `cd backend`
 2. `pip install -r requirements.txt`
-3. Create a `.env` file and add: `TMDB_API_KEY=your_key_here`
+3. Create a `.env` file to add api
 4. `python app.py`
 
 ---
